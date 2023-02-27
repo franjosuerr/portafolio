@@ -1,0 +1,11 @@
+<div class="row">
+    <div *ngFor="let proyecto of proyectos" class="col-12 col-md-4">
+        <div class="card mb-3">
+            <img [src]="proyecto.img" class="img-thumbnail" alt={{proyecto.nombre}}>
+            <h3 class="card-header">{{proyecto.nombre}}</h3>                      
+            <a target="_blank" [href]="proyecto.url"  class="btn btn-info"> Visitar</a>
+            <a [routerLink]="'info/'+getURI(proyecto.nombre)"  class="btn btn-success"> Detalles</a>
+        </div>
+
+    </div>
+</div>
